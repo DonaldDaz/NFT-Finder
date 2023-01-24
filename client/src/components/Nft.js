@@ -2,7 +2,7 @@ import React from 'react'
 import {Link } from 'react-router-dom'
 
 const Nft = ({nft}) => {
-  const { similarityScore, base64Img, category, coco_url, collection, date_captured, file_name,
+  const { similarityScore, base64Img, category,nft_name, coco_url, collection, date_captured, file_name,
     file_path, flickr_url, generated_caption, height, id, license, 
     original_caption, similarity, width } = nft
 

@@ -20,7 +20,7 @@ initialNFTNumber = 30
 
 
 
-JSON_PATH="/Users/davidazzato/Desktop/Tesi/Capitolo 3/image_captioning_results_embedded_flamingo.json"
+JSON_PATH="/Users/davidazzato/Desktop/Tesi/Capitolo 3/image_captioning_results_embedded_flamingo_v2.json"
 JSON_PATH_INIT="/Users/davidazzato/Desktop/Tesi/Capitolo 3/image_captioning_results_flamingo.json"
 IMG_PATH="/Users/davidazzato/Desktop/Tesi/Capitolo 2"
 
@@ -58,7 +58,7 @@ if __name__ == "__main__":
 def getNftById(identifier):
     result = {"similars":[]}
 
-    with open(JSON_PATH_INIT, 'rb') as fp:
+    with open(JSON_PATH, 'rb') as fp:
             nftList = json.load(fp)
     
     print("Launched getNft")
@@ -71,6 +71,7 @@ def getNftById(identifier):
                 nft["base64Img"]= base64.b64encode(img).decode('utf-8')
                 print("Nft found!")
                 result["nft"]=nft
+                print(nft["nft_name"])
             counter = 0
             for nft2 in nftList["images"]:
                 if(nft2["collection"]==nft["collection"]) and not (nft2["id"]==nft["id"]):

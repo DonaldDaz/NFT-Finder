@@ -30,7 +30,7 @@ const SingleNft = () => {
     return <Loading />;
   }
 
-  const { similarityScore, base64Img, category, coco_url, collection, date_captured, file_name,
+  const { similarityScore, base64Img, category, nft_name, coco_url, collection, date_captured, file_name,
     file_path, flickr_url, generated_caption, height, id, license,
     original_caption, similarity, width } = singleNft
 
@@ -50,7 +50,11 @@ const SingleNft = () => {
             <h2></h2>
             <div className="nftDetails">
               <img src={`data:image/jpeg;base64,${base64Img}`} />
-              <div className="nft-info">
+                <div className="nft-info">
+                <p>
+                  <span className="nftDetails-data">Name :</span>
+                  {nft_name}
+                </p>
                 <p>
                   <span className="nftDetails-data">Description :</span>
                   {generated_caption}
