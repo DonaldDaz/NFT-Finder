@@ -1,6 +1,4 @@
-### A Cocktail search application made with React
-
-https://dammie-cocktails.netlify.app/
+### A NFT Application in React
 
 #### React Router Fix
 
